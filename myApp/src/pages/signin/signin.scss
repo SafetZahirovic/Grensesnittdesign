@@ -1,0 +1,29 @@
+page-signin {
+    .item-ios {
+        border: 1px solid grey !important;
+        margin: 10px auto;
+        padding-left: 0 !important;
+        border-radius: 7px;
+        width: 80%;
+        
+    }
+    .item-inner{
+        border: none !important;
+        padding: 0 !important;
+    }
+    .item-input ion-label{
+        display: none;
+    }
+    form{
+    margin-top: 60px;
+    }
+    #button-container{
+        margin-top: 60px;
+    }
+    .button-round-ios{
+        padding: 1.7em;
+    }
+    .button-outline-ios-secondary{
+        width: 100%;
+    }
+}
