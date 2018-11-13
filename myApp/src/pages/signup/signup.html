@@ -9,39 +9,40 @@
       <ion-title>Sign up</ion-title>
     </ion-navbar>
   </ion-header>
-
-
   
   <ion-content padding>
-      <ion-img width="350" height="200" src="https://firebasestorage.googleapis.com/v0/b/grensesnittdesign.appspot.com/o/images%2Fstock-vector-oslo-norway-skyline-with-panorama-in-white-background-vector-illustration-business-travel-and-533055928.jpg?alt=media&token=67a1e35c-f038-4492-a097-bae6f60fb507"></ion-img>
     <form *ngIf="!data.removeFields" (ngSubmit)="handleSignUp()">
       
       <ion-list>
           <ion-item>
               <ion-label floating>Enter your nickname</ion-label>
-              <ion-input type="username" placeholder="Username" [(ngModel)]="data.name" name="Email" required=""></ion-input>
+              <ion-input type="email" [(ngModel)]="data.name" name="Email" required=""></ion-input>
             </ion-item>
         <ion-item>
           <ion-label floating>Enter your email</ion-label>
-          <ion-input type="emil" placeholder="E-mail" [(ngModel)]="data.email" name="Email" required=""></ion-input>
+          <ion-input type="email" [(ngModel)]="data.email" name="Email" required=""></ion-input>
         </ion-item>
         <ion-item>
             <ion-label floating>Enter your email</ion-label>
-            <ion-input type="password" placeholder="Password" [(ngModel)]="data.password" name="Password" required=""></ion-input>
+            <ion-input type="password" [(ngModel)]="data.password" name="Password" required=""></ion-input>
         </ion-item>
           
-          <button ion-button full round color="primary" type="submit">Sign up</button>
+          <button ion-button full color="primary" type="submit">Sign up</button>
          
       </ion-list>
       
     </form>
     
+    <ion-content>
         <div>{{data.userCreated}}</div>
         <div id="message"></div>
-        <div  *ngIf="data.true" id="animation">
-          <img src="https://firebasestorage.googleapis.com/v0/b/grensesnittdesign.appspot.com/o/images%2FFacebook-0.8s-200px.gif?alt=media&token=333fa3a8-336a-4a8c-bfae-9a2ad77b38da" />
+        <div  *ngIf="data.removeFields" id="circle-loader" class="circle-loader">
+            <div class="checkmark draw"></div>
           </div>
-        <button *ngIf="data.continue" ion-button full round  (click)="goToNextPage()" color="primary" type="submit">Continue</button>
        
+        <button *ngIf="data.continue" ion-button full  (click)="goToNextPage()" color="primary" type="submit">Continue</button>
+       
+    </ion-content>
+    
+    
   </ion-content>
-

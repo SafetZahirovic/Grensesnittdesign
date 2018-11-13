@@ -14,4 +14,32 @@ page-places {
         }
     }
 
+    .card-background-page ion-card {
+        position: relative;
+        text-align: center;
+        width: 80%;
+        margin: 20px auto;
+        height: 20%;
+        border-radius: 10px;
+    }
+    #places-to-visit{
+        margin: auto;
+        width: 80%;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .searchbar-input-container{
+        margin-top: 50px;
+        width: 80%;
+        margin: auto;
+    }
+    .searchbar {
+        margin: 10px 0;
+    }
+    #oslo-attractions{
+        text-align: center;
+        
+        margin-top: 40px;
+    }
+
 }

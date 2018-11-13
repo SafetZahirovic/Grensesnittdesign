@@ -15,26 +15,15 @@ page-signin {
         display: none;
     }
     form{
-        margin-top: 60px;
+    margin-top: 60px;
     }
     #button-container{
-        margin-top: 10px;
+        margin-top: 60px;
     }
     .button-round-ios{
         padding: 1.7em;
     }
     .button-outline-ios-secondary{
         width: 100%;
-    }
-    #sign-up-button{
-        background-color: rgba($color: #000000, $alpha: 0) !important;
-        color:#488aff;
-        border: 2px solid #488aff;
-        border-radius: 64px;
-        padding: 0 2.6rem;
-        margin: 20px 0;
-    }
-    img{
-        margin-top: 40px;
     }
 }

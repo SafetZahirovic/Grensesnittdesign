@@ -5,15 +5,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'Firebase';
 import { TabsPage } from '../pages/tabs/tabs';
 <<<<<<< HEAD
+
 import {SigninPage} from '../pages/signin/signin'
 import { MapsPage } from '../pages/maps/maps';
 import { GoogleMapsPage } from '../pages/google-maps/google-maps';
 
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+
+import {PlacesPage} from '../pages/places/places';
+
 =======
 import {SigninPage} from '../pages/signin/signin';
-import {PlacesPage} from '../pages/places/places';
->>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
+import { PlacePage } from '../pages/placepage/placepage';
+>>>>>>> b181b53cec98215723f30687549e0043702adf7f
 
 var config = {
   apiKey: "AIzaSyDqM3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
@@ -25,27 +29,26 @@ var config = {
 };
 
 
-
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
 <<<<<<< HEAD
 
-  rootPage:any = ResetPasswordPage
-=======
   rootPage:any = PlacesPage;
->>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
+
+=======
+  rootPage:any = PlacePage;
+>>>>>>> b181b53cec98215723f30687549e0043702adf7f
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
-   
+
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
     });
-    firebase.initializeApp(config); 
+    firebase.initializeApp(config);
   }
 }
