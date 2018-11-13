@@ -37,26 +37,28 @@ export class SignupPage {
    
   }
 
-  
-  
-
   handleSignUp() {
     var email = this.data.email;
     var username = this.data.name;
-    var getUserData = "";
     
     firebase.auth().createUserWithEmailAndPassword(this.data.email, this.data.password).then(function success(userData) {
       firebase.database().ref('Users/').push().set({
         Username: username,
         Email: email
       });
-
       userData.updateProfile({
         displayName: username
       })
 
   }).then(() => {
-    this.something();
+    this.data.true = true;
+    this.data.removeFields = true;
+  
+  setTimeout(() => {
+    this.data.userCreated = "You have successfully created user";
+    this.data.true = false;
+    this.data.continue = true;
+  }, 3000);
   }).catch(function failure(error) {
           // Handle Errors here.
           
@@ -76,20 +78,6 @@ export class SignupPage {
   // [END createwithemail]
       console.log(firebase.auth().currentUser);    
 };
-
-public something(){
-  this.data.true = true;
-  this.data.removeFields = true;
-  setTimeout(() => {
-    document.getElementById("circle-loader").id="load-complete";
-  }, 2500);
-  setTimeout(() => {
-    this.data.userCreated = "You have successfully created user";
-    this.data.true = false;
-    this.data.continue = true;
-  }, 6000);
-  
-}
 
 goToNextPage(){
   this.navCtrl.setRoot(HomePage,{

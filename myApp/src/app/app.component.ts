@@ -5,6 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'Firebase';
 import { TabsPage } from '../pages/tabs/tabs';
 import {SigninPage} from '../pages/signin/signin'
+import { MapsPage } from '../pages/maps/maps';
+import { GoogleMapsPage } from '../pages/google-maps/google-maps';
+
+import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
 var config = {
   apiKey: "AIzaSyDqM3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
@@ -16,11 +20,14 @@ var config = {
 };
 
 
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SigninPage;
+
+  rootPage:any = ResetPasswordPage
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
