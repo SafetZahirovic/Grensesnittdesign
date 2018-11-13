@@ -4,7 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'Firebase';
 import { TabsPage } from '../pages/tabs/tabs';
-import {SigninPage} from '../pages/signin/signin'
+import {SigninPage} from '../pages/signin/signin';
+import {PlacesPage} from '../pages/places/places';
 
 var config = {
   apiKey: "AIzaSyDqM3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
@@ -20,7 +21,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SigninPage;
+  rootPage:any = PlacesPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -13,12 +13,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 
+import { PlacesPage } from '../pages/places/places'
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SigninPage,
     SignupPage,
+    PlacesPage,
     
   ],
   imports: [
@@ -31,6 +34,7 @@ import { SignupPage } from '../pages/signup/signup';
     HomePage,
     SigninPage,
     SignupPage,
+    PlacesPage,
   ],
   providers: [
     StatusBar,
