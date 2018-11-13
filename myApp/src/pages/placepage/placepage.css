@@ -1,0 +1,42 @@
+img {
+  max-width: 100%;
+  border: 0;
+  height: 35rem; }
+
+.item h2 {
+  font-size: 2.2rem; }
+
+ion-card.adv-map p {
+  font-size: 0.7em !important; }
+
+button[fab].fab-map {
+  top: calc(100% - 35px);
+  z-index: 50; }
+
+.item-bold {
+  font-weight: bold; }
+
+ion-content.cards-bg {
+  background-color: #f4f4f7; }
+
+.label {
+  margin-top: 1rem;
+  margin-bottom: 0rem; }
+
+.fab {
+  background-image: linear-gradient(to right, #FF7979, #e91e63);
+  right: 2rem;
+  bottom: 3rem; }
+
+.fab ion-icon {
+  font-size: 3.5rem;
+  font-weight: bold; }
+
+.feedback-icon {
+  font-weight: bold;
+  color: #e91e63; }
+
+.feedback {
+  color: #000; }
+
+/*# sourceMappingURL=placepage.css.map */
