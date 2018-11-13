@@ -4,11 +4,16 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'Firebase';
 import { TabsPage } from '../pages/tabs/tabs';
+<<<<<<< HEAD
 import {SigninPage} from '../pages/signin/signin'
 import { MapsPage } from '../pages/maps/maps';
 import { GoogleMapsPage } from '../pages/google-maps/google-maps';
 
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
+=======
+import {SigninPage} from '../pages/signin/signin';
+import {PlacesPage} from '../pages/places/places';
+>>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
 
 var config = {
   apiKey: "AIzaSyDqM3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
@@ -26,8 +31,12 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
 
   rootPage:any = ResetPasswordPage
+=======
+  rootPage:any = PlacesPage;
+>>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

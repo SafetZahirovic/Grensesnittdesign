@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 
+<<<<<<< HEAD
 import{ MapsPage } from '../pages/maps/maps';
 
 import { GoogleMapsPage } from '../pages/google-maps/google-maps';
@@ -25,6 +26,9 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
 
 
+=======
+import { PlacesPage } from '../pages/places/places'
+>>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
 
 @NgModule({
   declarations: [
@@ -33,9 +37,13 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
     HomePage,
     SigninPage,
     SignupPage,
+<<<<<<< HEAD
     GoogleMapsPage,
     ResetPasswordPage
     
+=======
+    PlacesPage,
+>>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
     
   ],
   imports: [
@@ -50,9 +58,13 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
     HomePage,
     SigninPage,
     SignupPage,
+<<<<<<< HEAD
     GoogleMapsPage,
     ResetPasswordPage
     
+=======
+    PlacesPage,
+>>>>>>> 4454d8ab8133280fc1ba1f63e520d137825ab3b7
   ],
   providers: [
     StatusBar,
