@@ -14,7 +14,6 @@ import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 import{ MapsPage } from '../pages/maps/maps';
 
@@ -31,11 +30,6 @@ import { PlacePage } from "../pages/placepage/placepage";
 
 import { Navbar } from '../pages/navbar/navbar'
 >>>>>>> b181b53cec98215723f30687549e0043702adf7f
-=======
-import { PlacePage } from "../pages/placepage/placepage";
-
-import { Navbar } from '../pages/navbar/navbar'
->>>>>>> b181b53cec98215723f30687549e0043702adf7f
 
 @NgModule({
   declarations: [
@@ -44,7 +38,6 @@ import { Navbar } from '../pages/navbar/navbar'
     SigninPage,
     SignupPage,
 <<<<<<< HEAD
-<<<<<<< HEAD
 
     GoogleMapsPage,
     ResetPasswordPage,
@@ -52,11 +45,6 @@ import { Navbar } from '../pages/navbar/navbar'
     PlacesPage,
 
     
-=======
-    PlacePage,
-    Navbar
-
->>>>>>> b181b53cec98215723f30687549e0043702adf7f
 =======
     PlacePage,
     Navbar
@@ -74,17 +62,12 @@ import { Navbar } from '../pages/navbar/navbar'
     SigninPage,
     SignupPage,
 <<<<<<< HEAD
-<<<<<<< HEAD
     GoogleMapsPage,
     ResetPasswordPage,
     
 
     PlacesPage,
 
-=======
-    PlacePage,
-    Navbar
->>>>>>> b181b53cec98215723f30687549e0043702adf7f
 =======
     PlacePage,
     Navbar

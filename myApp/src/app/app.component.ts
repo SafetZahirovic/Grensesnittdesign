@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import * as firebase from 'Firebase';
 import { TabsPage } from '../pages/tabs/tabs';
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 import {SigninPage} from '../pages/signin/signin'
 import { MapsPage } from '../pages/maps/maps';
@@ -15,10 +14,6 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
 import {PlacesPage} from '../pages/places/places';
 
-=======
-import {SigninPage} from '../pages/signin/signin';
-import { PlacePage } from '../pages/placepage/placepage';
->>>>>>> b181b53cec98215723f30687549e0043702adf7f
 =======
 import {SigninPage} from '../pages/signin/signin';
 import { PlacePage } from '../pages/placepage/placepage';
@@ -39,13 +34,9 @@ var config = {
 })
 export class MyApp {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
   rootPage:any = PlacesPage;
 
-=======
-  rootPage:any = PlacePage;
->>>>>>> b181b53cec98215723f30687549e0043702adf7f
 =======
   rootPage:any = PlacePage;
 >>>>>>> b181b53cec98215723f30687549e0043702adf7f
