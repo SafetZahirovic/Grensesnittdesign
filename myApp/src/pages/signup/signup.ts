@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { SigninPage } from '../signin/signin';
 import { checkAndUpdateBinding } from '../../../node_modules/@angular/core/src/view/util';
 import { TemplateBinding } from '../../../node_modules/@angular/compiler';
-import { HomePage } from '../home/home';
+import { PlacesPage } from '../places/places'
 /**
  * Generated class for the SignupPage page.
  *
@@ -92,7 +92,7 @@ public something(){
 }
 
 goToNextPage(){
-  this.navCtrl.setRoot(HomePage,{
+  this.navCtrl.setRoot(PlacesPage,{
     UserID: firebase.auth().currentUser.uid,
     Username: this.data.name,
     Email: this.data.email

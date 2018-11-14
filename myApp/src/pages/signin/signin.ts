@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content, Ion, Label, Item } from 'ionic-angular';
-import { HomePage } from  '../home/home';
 import * as firebase from 'Firebase';
 import { SignupPage } from '../signup/signup';
-
+import { PlacesPage } from '../places/places'
 /**
  * Generated class for the SigninPage page.
  *
@@ -77,7 +76,7 @@ export class SigninPage {
   }
 
   sendWithUser(){
-    this.navCtrl.setRoot(HomePage, {
+    this.navCtrl.setRoot(PlacesPage, {
       Username: this.data.User,
       User: firebase.auth().currentUser.displayName,
      })
@@ -88,7 +87,7 @@ export class SigninPage {
     this.navCtrl.setRoot(SignupPage);
   }
   continueAsGuest(){
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(PlacesPage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SigninPage');

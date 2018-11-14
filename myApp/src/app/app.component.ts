@@ -11,7 +11,9 @@ import { MapsPage } from '../pages/maps/maps';
 
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 
-import {PlacesPage} from '../pages/places/places';
+import { PlacesPage } from '../pages/places/places';
+
+import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
 
 
 
@@ -29,12 +31,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-
-
-  rootPage:any = PlacesPage;
-
-
-
+  rootPage:any = PlaceDescriptionPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
 
