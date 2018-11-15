@@ -17,6 +17,7 @@ import { Navbar } from '../pages/navbar/navbar'
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
 import {HttpClientModule} from '@angular/common/http';
 import { MapComponent } from '../components/map/map';
+import {PopoverComponent} from "../components/popover/popover";
 
 @NgModule({
   declarations: [
@@ -26,8 +27,10 @@ import { MapComponent } from '../components/map/map';
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+
     MapsPage,
     MapComponent,
+    PopoverComponent,
   ],
   imports: [
     
@@ -43,8 +46,10 @@ import { MapComponent } from '../components/map/map';
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+
     MapsPage,
     MapComponent,
+    PopoverComponent
   ],
   providers: [
     MapComponent,

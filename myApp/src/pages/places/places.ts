@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PopoverController } from 'ionic-angular';
+import {PopoverComponent} from "../../components/popover/popover";
 
 /**
  * Generated class for the PlacesPage page.
@@ -13,24 +15,43 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-places',
   templateUrl: 'places.html',
 })
+
 export class PlacesPage {
   counter: number;
+
   public cards = {
-    places: ["Barcode", "Slottet", "Opera"],
-    placesImages: ["assets/imgs/Barcode.jpg", "assets/imgs/Slottet.jpeg", "assets/imgs/Opera.jpg"]
+    places: ["Barcode", "Royal Castle", "The Opera", "Holmenkollen", "Frognerparken", "Museum of Science"],
+    placesImages: ["assets/imgs/barcode.jpg",
+      "assets/imgs/Slottet.jpeg", "assets/imgs/Opera.jpg",
+      "assets/imgs/holmenkollen.jpg",
+      "assets/imgs/frognerparken.jpg",
+      "assets/imgs/teknisk_museum.jpg"]
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
     this.counter = 0
   }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(PopoverComponent);
+    popover.present({
+      ev: myEvent
+    }).catch((error) => alert("Welcome to the world of Spagetti Code"));
+  }
+
+
 
 
   initializeItems(){
     console.log(this.counter);
     
     this.cards = {
-      places: ["Barcode", "Slottet", "Opera"],
-      placesImages: ["assets/imgs/Barcode.jpg", "assets/imgs/Slottet.jpeg", "assets/imgs/Opera.jpg"]
+      places: ["Barcode", "Royal Castle", "The Opera", "Holmenkollen", "Museum of Science and Techonlogy"],
+      placesImages: ["assets/imgs/Barcode.jpg",
+        "assets/imgs/Slottet.jpeg",
+        "assets/imgs/Opera.jpg",
+        "assets/imgs/holmenkollen.jpg",
+        "assets/imgs/teknisk_museum.jpg"]
     }
   }
 

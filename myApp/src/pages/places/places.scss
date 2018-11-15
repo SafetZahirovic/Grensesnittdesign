@@ -1,45 +1,65 @@
 page-places {
-    .card-background-page{
-        ion-card{
-            position: relative;
-            text-align: center;
-        }
-        .card-title{
-            position: absolute;
-            top: 36%;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: black;
-        }
+  .card-background-page{
+    ion-card{
+      position: relative;
+      text-align: center;
     }
+    .card-title{
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: white;
+    }
+  }
 
-    .card-background-page ion-card {
-        position: relative;
-        text-align: center;
-        width: 80%;
-        margin: 20px auto;
-        height: 20%;
-        border-radius: 10px;
-    }
-    #places-to-visit{
-        margin: auto;
-        width: 80%;
-        margin-top: 20px;
-        font-size: 18px;
-    }
-    .searchbar-input-container{
-        margin-top: 50px;
-        width: 80%;
-        margin: auto;
-    }
-    .searchbar {
-        margin: 10px 0;
-    }
-    #oslo-attractions{
-        text-align: center;
-        
-        margin-top: 40px;
-    }
+  .card-background-page {
+
+  }
+
+  .card-background-page ion-card {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    height: 20%;
+    border-radius: 10px;
+  }
+
+  .searchbar-ios {
+    background-color: white !important;
+    border-bottom: none !important;
+  }
+
+  .searchbar-ios .searchbar-input-container {
+    border-bottom: 1px solid grey !important;
+  }
+
+
+
+  .card-background-page ion-card img {
+    height: 100%;
+  }
+
+  #places-to-visit{
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .searchbar-input-container{
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+  }
+  .searchbar {
+    margin: 10px 0;
+  }
+  #oslo-attractions{
+    text-align: center;
+
+    margin-top: 40px;
+  }
 
 }
