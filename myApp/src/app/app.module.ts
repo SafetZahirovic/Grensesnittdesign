@@ -15,6 +15,7 @@ import { PlacePage } from "../pages/placepage/placepage";
 import {PlacesPage} from '../pages/places/places';
 import { Navbar } from '../pages/navbar/navbar'
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
+import {PopoverComponent} from "../components/popover/popover";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    PopoverComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    PopoverComponent
   ],
   providers: [
     StatusBar,
