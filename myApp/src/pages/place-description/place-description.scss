@@ -1,3 +1,97 @@
 page-place-description {
+    .hero img {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      .promo {
+        clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
+      }
+      
+      // demo code below
+      .hero {
+            width: 100%;
+            color: #fff;
+            font-family: 'Fira Sans', sans-serif;
+            position: relative;
+            text-align: center;
+            text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+        
+            
+        img {
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+
+        figcaption h1{
+            margin: 0 !important;
+        }
+        
+        figcaption {
+            margin: auto;
+            position: relative;
+            width: 40%;
+            top: 230px;
+            right: 80px;
+        }
+        figure{
+            margin: 0 !important;
+        }
+
+        hr{
+            margin-left: 0px;
+            left: 0;
+            width: 30%;
+            height: 3px;
+            background-image: linear-gradient(to right, #FAD961 , #F76B1C);
+        }
+        
+        h1 {
+            text-align: left;
+            font-size: 32px;
+        }
+        
+       
+        
+        p {
+            text-align: left;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        .scroll-content{
+            margin-top: 37px !important;
+        }
+      }
+      #description-container{
+        margin: 10px;
+        position: relative;
+        height: 35%;
+        top: 40%;
+    }
+    #description-header{
+        
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: right;
+    }
+    #description-header p{
+        margin: 0;
+    }
+    #description-text{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        text-align: left;
+    }
+
+    #description-map-container{
+        margin: 10px;
+        position: relative;
+        height: 35%;
+        top: 40%;
+    }
+    #map{
+        position: absolute;
+    }
 
 }

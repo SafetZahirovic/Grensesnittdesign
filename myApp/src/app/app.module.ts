@@ -15,6 +15,8 @@ import { PlacePage } from "../pages/placepage/placepage";
 import {PlacesPage} from '../pages/places/places';
 import { Navbar } from '../pages/navbar/navbar'
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
+import {HttpClientModule} from '@angular/common/http';
+import { MapComponent } from '../components/map/map';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,12 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    MapsPage,
+    MapComponent,
   ],
   imports: [
+    
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -37,8 +43,11 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    MapsPage,
+    MapComponent,
   ],
   providers: [
+    MapComponent,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
