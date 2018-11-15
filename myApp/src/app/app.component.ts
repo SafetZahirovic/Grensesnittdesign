@@ -18,7 +18,7 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
 
 
 var config = {
-  apiKey: "AIzaSyDq4M3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
+  apiKey: "AIzaSyDqM3XHOVjR4IDR2vQfAyUzEnLCHgGlXPY",
   authDomain: "grensesnittdesign.firebaseapp.com",
   databaseURL: "https://grensesnittdesign.firebaseio.com",
   projectId: "grensesnittdesign",
@@ -31,7 +31,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PlacesPage;
+  rootPage:any = PlaceDescriptionPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
 

@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { MapComponent } from './map/map';
-import { PopoverComponent } from './popover/popover';
 @NgModule({
 	declarations: [MapComponent,
-    MapComponent,PopoverComponent],
+    MapComponent],
 	imports: [],
 	exports: [MapComponent,
-	MapComponent,PopoverComponent]
-	})
-
+    MapComponent]
+})
 export class ComponentsModule {}

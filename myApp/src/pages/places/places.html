@@ -1,15 +1,17 @@
+<!--
+  Generated template for the PlacesPage page.
 
-<!-- Cards for different attractions -->
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 
 <ion-content class ="card-background-page">
     <div id="oslo-attractions">Oslo attractions</div>
     <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
-    <div id="places-to-visit">Places to Visit</div>
+    <div id="places-to-visit">Top 10 places to visit</div>
   <ion-card *ngFor="let cards1 of cards.placesImages; let i = index">
       <img src={{cards1}}/>
       <div class="card-title">{{cards.places[i]}}</div>
-  </ion-card>
-
-  <button ion-button (click)="presentPopover()">Filter</button>
+    </ion-card>
 </ion-content>
