@@ -8,13 +8,19 @@
 
 <ion-content padding>
 
-  <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img>
+  <div class="stoppable">
+    <canvas style="display: none" width="300px" height="200"></canvas>
+    <!-- <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img> -->
+    <ion-img class="gif" src="https://gph.to/2RZHVBG" alt="not found"></ion-img>
+  </div>
+
+
   <form (ngSubmit)="userLogin()">
     <ion-list>
 
       <div class="btn-container">
         <button class="btn1" (click)="userLogin()" type="submit">Sign In</button>
-        <button class="btn2" href="#" (click)="userSignup()" type="submit">Sign up</button>
+        <button class="btn2" href="#" type="submit">Sign up</button>
       </div>
     </ion-list>
   </form>
@@ -22,5 +28,6 @@
 
 
 </ion-content>
+
 
 
