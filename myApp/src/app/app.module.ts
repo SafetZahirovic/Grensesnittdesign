@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
+import { Startpage } from "../pages/startpage/startpage";
 import{ MapsPage } from '../pages/maps/maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
@@ -24,6 +25,7 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    Startpage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import  { PlaceDescriptionPage } from '../pages/place-description/place-descript
     ResetPasswordPage,
     PlacesPage,
     PlaceDescriptionPage,
+    Startpage,
   ],
   providers: [
     StatusBar,

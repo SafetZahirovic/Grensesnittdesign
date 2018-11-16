@@ -14,6 +14,8 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { PlacesPage } from '../pages/places/places';
 
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
+import { Startpage } from "../pages/startpage/startpage";
+import {SignupPage} from "../pages/signup/signup";
 
 
 
@@ -31,7 +33,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SigninPage ;
+  rootPage:any = Startpage ;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
 
