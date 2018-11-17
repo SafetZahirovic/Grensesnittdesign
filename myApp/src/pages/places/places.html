@@ -6,19 +6,22 @@
 -->
 
 <!-- Cards for different attractions -->
-
 <ion-content class ="card-background-page">
 
- <div id="oslo-attractions">Oslo attractions</div>
- <div class="search-container">
-   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-   <img id="filter" (click)="presentPopover()" src="assets/imgs/filter.png">
- </div>
+  <div id="oslo-attractions">Oslo attractions</div>
+  <div class="search-container">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <img id="filter" (click)="presentPopover()" src="assets/imgs/filter.png">
+  </div>
 
- <div id="places-to-visit">Places to Visit</div>
- <ion-card (click)="getInformation($event)" *ngFor="let card of cards; let i = index">
-   <div class="card-title">{{cards[i].placeName}}</div>
-   <div class="card-category">{{cards[i].placeCategory}}</div>
-   <img src= {{cards[i].placeImages}} />
- </ion-card>
+  <div id="places-to-visit">Places to Visit</div>
+  <ion-card (click)="getInformation($event)" *ngFor="let card of cards; let i = index">
+    <div class="card-title">{{cards[i].placeName}}</div>
+    <div class="card-category">{{cards[i].placeCategory}}</div>
+    <img src= {{cards[i].placeImages}} />
+  </ion-card>
+
+
 </ion-content>
+<nav-bar class="bottom"></nav-bar>
+

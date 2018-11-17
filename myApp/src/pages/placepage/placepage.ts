@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Navbar } from "../navbar/navbar";
 
 import * as firebase from 'Firebase';
 
@@ -19,7 +18,7 @@ import * as firebase from 'Firebase';
 export class PlacePage {
   rooms = [];
   ref = firebase.database().ref('Users/');
-  constructor(public navCtrl: NavController, public navParams: NavParams, public navBar: Navbar) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ref.on('value', resp => {
       console.log();
 
