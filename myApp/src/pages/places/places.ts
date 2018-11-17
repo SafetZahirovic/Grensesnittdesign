@@ -92,9 +92,9 @@ export class PlacesPage {
         arr.push(this.cards[index])
       }
     }
-    this.navCtrl.push(PlaceDescriptionPage, {
+    this.navCtrl.setRoot(PlaceDescriptionPage, {
      Data: arr,
-    })
+    }, {animate: true, direction: 'forward'})
 }
 
   ionViewDidEnter() {

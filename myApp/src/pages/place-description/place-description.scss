@@ -140,7 +140,16 @@ page-place-description {
           left: 0%;
           font-size: 15px;
       }
-      
+      .bottom {
+        z-index: 99;
+        position: fixed;
+        overflow: hidden;
+        background-color: white;
+        height: 8%;
+        width: 100%;
+        bottom: 0;
+        border-top: 1px solid grey;
+      }
 
       @keyframes dim {
         0%   {

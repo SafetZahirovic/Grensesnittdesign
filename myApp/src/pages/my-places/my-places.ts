@@ -27,8 +27,9 @@ export class MyPlacesPage {
       
       firebase.database().ref('Places/'+ firebase.auth().currentUser.uid).on('value', snapshot =>{
      
-        
+        this.cards = []
         Object.keys(snapshot.val()).map(map =>{
+          
           this.cards.push({
             expanded:false,
             name: snapshot.val()[map].buildingName,
@@ -54,9 +55,7 @@ export class MyPlacesPage {
             } else {
                 listItem.expanded = false;
             }
- 
             return listItem;
- 
         });
  
     }

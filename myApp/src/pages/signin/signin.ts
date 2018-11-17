@@ -21,6 +21,7 @@ export class SigninPage {
   ref = firebase.database().ref('Users/');
   user: string;
   password: string;
+  tabBarElement: any;
 
   storage = firebase.storage().ref().child('images/');
   public data = { 
@@ -32,7 +33,6 @@ export class SigninPage {
   };
   public constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.data.isTrue = this.navParams.get("true") as boolean;
-
     Object.keys(this.storage).map( e =>{
       console.log(e);
     })
@@ -79,7 +79,7 @@ export class SigninPage {
 
   
   sendWithUser(){
-    this.navCtrl.setRoot(MyPlacesPage, {
+    this.navCtrl.setRoot(PlacesPage, {
       Username: this.data.User,
       User: firebase.auth().currentUser.displayName,
      })
@@ -94,6 +94,24 @@ export class SigninPage {
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SigninPage');
+  }
+
+  ionViewWillEnter() {
+    let tabs = document.querySelectorAll('.tabbar');
+    if ( tabs !== null ) {
+      Object.keys(tabs).map((key) => {
+        tabs[ key ].style.transform = 'translateY(56px)';
+      });
+    } // end if
+  }
+
+  ionViewDidLeave() {
+    let tabs = document.querySelectorAll('.tabbar');
+    if ( tabs !== null ) {
+      Object.keys(tabs).map((key) => {
+        tabs[ key ].style.transform = 'translateY(0)';
+      });
+    } // end if
   }
 
 }
