@@ -59,7 +59,6 @@ export class MapsPage {
 
 
   ionViewDidLoad() {
-    this.map.getMap(10.752245,59.913868);
    }
   
 }

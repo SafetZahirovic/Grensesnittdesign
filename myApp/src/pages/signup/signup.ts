@@ -47,6 +47,7 @@ export class SignupPage {
     
     firebase.auth().createUserWithEmailAndPassword(this.data.email, this.data.password).then(function success(userData) {
       firebase.database().ref('Users/').push().set({
+        ID: firebase.auth().currentUser.uid,
         Username: username,
         Email: email
       });
@@ -92,7 +93,7 @@ public something(){
 }
 
 goToNextPage(){
-  this.navCtrl.setRoot(PlacesPage,{
+  this.navCtrl.setRoot(SigninPage,{
     UserID: firebase.auth().currentUser.uid,
     Username: this.data.name,
     Email: this.data.email

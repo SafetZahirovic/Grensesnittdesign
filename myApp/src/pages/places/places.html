@@ -5,13 +5,20 @@
   Ionic pages and navigation.
 -->
 
-<ion-content class ="card-background-page">
-    <div id="oslo-attractions">Oslo attractions</div>
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<!-- Cards for different attractions -->
 
-    <div id="places-to-visit">Top 10 places to visit</div>
-  <ion-card *ngFor="let cards1 of cards.placesImages; let i = index">
-      <img src={{cards1}}/>
-      <div class="card-title">{{cards.places[i]}}</div>
-    </ion-card>
+<ion-content class ="card-background-page">
+
+ <div id="oslo-attractions">Oslo attractions</div>
+ <div class="search-container">
+   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+   <img id="filter" (click)="presentPopover()" src="assets/imgs/filter.png">
+ </div>
+
+ <div id="places-to-visit">Places to Visit</div>
+ <ion-card (click)="getInformation($event)" *ngFor="let card of cards; let i = index">
+   <div class="card-title">{{cards[i].placeName}}</div>
+   <div class="card-category">{{cards[i].placeCategory}}</div>
+   <img src= {{cards[i].placeImages}} />
+ </ion-card>
 </ion-content>

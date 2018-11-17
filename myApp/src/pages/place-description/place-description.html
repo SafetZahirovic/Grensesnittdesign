@@ -5,24 +5,36 @@
   Ionic pages and navigation.
 -->
 
+    
 
 <ion-content>
-
+    <button id="button" (click)="back()" icon-only>
+        <ion-icon name="ios-arrow-round-back"  ></ion-icon>
+      </button>
     <div class="hero">
-        <img src="https://unsplash.it/1600/900?image=830" alt="" />
+        
+        <img src={{this.img}} alt="" />
         <figure>
           <figcaption>
-            <h1>Barcode</h1>
+            <h1>{{this.name}}</h1>
             <hr>
             <p>Attraction in Oslo</p>
           </figcaption>
         </figure>
+        <button id="favourites" (click)="this.foundUser ? removeFromDatabase() :  addToDatabase()" [disabled]="!this.user">
+         <ion-icon *ngIf="this.foundUser" name="checkmark-circle"></ion-icon> 
+         <ion-icon *ngIf="!this.foundUser" name="ios-heart-outline"></ion-icon>
+        </button>
       </div>
+
+      
           <div id="description-container">
+              
               <div id="description-header">
                 <p>Dronning Eufemies Gate</p>
                 <span>0190, Oslo</span>
               </div>
+              
               <div id="description-text">
                 <p>Lorem ipsum dolor sit amet, 
                   consectetur adipiscing elit, 
@@ -39,5 +51,4 @@
                 <div id='map' style='z-index: 999; width: 100%; height: 100%;'></div>
             </div>
 </ion-content>
-
 

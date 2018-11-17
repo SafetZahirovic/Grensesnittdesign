@@ -17,6 +17,10 @@ import { Navbar } from '../pages/navbar/navbar'
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
 import {HttpClientModule} from '@angular/common/http';
 import { MapComponent } from '../components/map/map';
+import { PopoverComponent } from '../components/popover/popover';
+import { ExpandableComponent } from '../components/expandable/expandable';
+import { MyPlacesPage } from '../pages/my-places/my-places';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { MapComponent } from '../components/map/map';
     PlaceDescriptionPage,
     MapsPage,
     MapComponent,
+    TabsPage,
+    PopoverComponent,
+    ExpandableComponent,
+    MyPlacesPage
   ],
   imports: [
     
@@ -45,8 +53,13 @@ import { MapComponent } from '../components/map/map';
     PlaceDescriptionPage,
     MapsPage,
     MapComponent,
+    TabsPage,
+    PopoverComponent,
+    ExpandableComponent,
+    MyPlacesPage
   ],
   providers: [
+    ExpandableComponent,
     MapComponent,
     StatusBar,
     SplashScreen,

@@ -31,7 +31,7 @@ var config = {
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = PlaceDescriptionPage;
+  rootPage:any = SigninPage;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
 

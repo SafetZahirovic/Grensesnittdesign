@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Content, Ion, Label, Item } from 'ionic-angular';
 import * as firebase from 'Firebase';
 import { SignupPage } from '../signup/signup';
-import { PlacesPage } from '../places/places'
+import { PlacesPage } from '../places/places';
 /**
  * Generated class for the SigninPage page.
  *
@@ -18,6 +18,8 @@ import { PlacesPage } from '../places/places'
 export class SigninPage {
   isTrue:boolean;
   ref = firebase.database().ref('Users/');
+  user: string;
+  password: string;
 
   storage = firebase.storage().ref().child('images/');
   public data = { 
@@ -33,20 +35,19 @@ export class SigninPage {
     Object.keys(this.storage).map( e =>{
       console.log(e);
     })
-
-    
-    
-    
   }
 
   userLogin() {
+    console.log(this.user);
+    console.log(this.password);
+    
+    
     let databaseUser = this.data.databaseUser;
-    let password = this.data.Password;
     
     let Message = this.data.Message;
 
-    firebase.auth().signInWithEmailAndPassword(this.data.User, this.data.Password).then(() => {
-      this.sendWithUser();
+    firebase.auth().signInWithEmailAndPassword(this.user, this.password).then(() => {
+      this.sendWithUser()
     }).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
@@ -75,6 +76,7 @@ export class SigninPage {
               }*/
   }
 
+  
   sendWithUser(){
     this.navCtrl.setRoot(PlacesPage, {
       Username: this.data.User,
@@ -84,7 +86,7 @@ export class SigninPage {
 
   userSignup(){
     console.log("Safet");
-    this.navCtrl.setRoot(SignupPage);
+    this.navCtrl.push(SignupPage);
   }
   continueAsGuest(){
     this.navCtrl.setRoot(PlacesPage);

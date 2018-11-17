@@ -9,15 +9,15 @@
   <ion-content padding>
     
     <ion-img width="350" height="200" src="https://firebasestorage.googleapis.com/v0/b/grensesnittdesign.appspot.com/o/images%2Fstock-vector-oslo-norway-skyline-with-panorama-in-white-background-vector-illustration-business-travel-and-533055928.jpg?alt=media&token=67a1e35c-f038-4492-a097-bae6f60fb507"></ion-img> 
-    <form (ngSubmit)="userLogin()">
+    <form>
     <ion-list>
         <ion-item>
           <ion-label >Username</ion-label>
-          <ion-input type="text" [(ngModel)]="data.User" placeholder="Username"  [ngModelOptions]="{standalone: true}" required=""></ion-input>
+          <ion-input type="text" [(ngModel)]="this.user" placeholder="Username"  [ngModelOptions]="{standalone: true}" required=""></ion-input>
         </ion-item>
         <ion-item>
             <ion-label>Password</ion-label>
-            <ion-input type="password" [(ngModel)]="data.Password" placeholder="Password" [ngModelOptions]="{standalone: true}" required=""></ion-input>
+            <ion-input type="password" [(ngModel)]="this.password" placeholder="Password" [ngModelOptions]="{standalone: true}" required=""></ion-input>
           </ion-item>
         <div id="button-container">
           <button ion-button round full (click)="userLogin()" color="primary" type="submit">Sign in</button>
@@ -25,7 +25,7 @@
         </div>
       </ion-list>
     </form>
-        <div text-center (click)="continueAsGuest()">Continue as a guest</div>
+        
     
   </ion-content>
   
