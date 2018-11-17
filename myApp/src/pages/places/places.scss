@@ -85,6 +85,15 @@ page-places {
     right: 20px;
     top: 87px;
   }
-  
- 
  }
+
+.bottom {
+  z-index: 99;
+  position: fixed;
+  overflow: hidden;
+  background-color: white;
+  height: 8%;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid grey;
+}

@@ -13,7 +13,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { PlacePage } from "../pages/placepage/placepage";
 import {PlacesPage} from '../pages/places/places';
-import { Navbar } from '../pages/navbar/navbar'
+import { NavbarComponent } from '../components/navbar/navbar'
 import  { PlaceDescriptionPage } from '../pages/place-description/place-description';
 import {HttpClientModule} from '@angular/common/http';
 import { MapComponent } from '../components/map/map';
@@ -35,7 +35,8 @@ import { MyPlacesPage } from '../pages/my-places/my-places';
     TabsPage,
     PopoverComponent,
     ExpandableComponent,
-    MyPlacesPage
+    MyPlacesPage,
+    NavbarComponent
   ],
   imports: [
     
@@ -56,14 +57,16 @@ import { MyPlacesPage } from '../pages/my-places/my-places';
     TabsPage,
     PopoverComponent,
     ExpandableComponent,
-    MyPlacesPage
+    MyPlacesPage,
+    NavbarComponent
   ],
   providers: [
     ExpandableComponent,
     MapComponent,
     StatusBar,
     SplashScreen,
+    NavbarComponent,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
 })
 export class AppModule {}
