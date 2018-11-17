@@ -1,5 +1,6 @@
 
 page-place-description {
+    @import "app/header.css";
     .hero img {
         clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
       }

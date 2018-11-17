@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import * as firebase from 'Firebase';
 
 import { Observable } from 'rxjs/Observable';
@@ -31,8 +31,14 @@ export class MapsPage {
 
   data: Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public  httpClient: HttpClient, public map: MapComponent ) {
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams,public  httpClient: HttpClient, public map: MapComponent ) {
+    console.log(this.navParams);
     
+    
+  }
+
+  back(){
+    this.viewCtrl.dismiss();
   }
 
   /*$http({
@@ -58,7 +64,20 @@ export class MapsPage {
   });*/
 
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
+    
+    document.getElementById("button").style.cssText="display: block";
    }
+
+   ionViewDidLoad(){
+    this.map.getRoutes(this.navParams.data.Coords);
+    document.getElementById("button").style.cssText="display: none";
+  }
+  ionWillEnter(){
+    document.getElementById("button").style.cssText="display: block";
+  }
+  ionViewWillLeave(){
+    document.getElementById("button").style.cssText="display: none";
+  }
   
 }

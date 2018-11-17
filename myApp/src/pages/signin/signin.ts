@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Content, Ion, Label, Item } from '
 import * as firebase from 'Firebase';
 import { SignupPage } from '../signup/signup';
 import { PlacesPage } from '../places/places';
+import { MyPlacesPage } from '../my-places/my-places';
 /**
  * Generated class for the SigninPage page.
  *
@@ -78,7 +79,7 @@ export class SigninPage {
 
   
   sendWithUser(){
-    this.navCtrl.setRoot(PlacesPage, {
+    this.navCtrl.setRoot(MyPlacesPage, {
       Username: this.data.User,
       User: firebase.auth().currentUser.displayName,
      })
