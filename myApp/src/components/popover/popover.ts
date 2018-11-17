@@ -16,6 +16,7 @@ export class PopoverComponent {
      {item: "Cool Buildings"},
      {item: "Parks"},
      {item: "Museums"},
+     {item: "Experiences"}
    ]
  }
 

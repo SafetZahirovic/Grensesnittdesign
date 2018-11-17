@@ -26,6 +26,13 @@ export class PlacesPage {
    {placeName: "Frognerparken", placeCategory: "Parks", placeImages: "assets/imgs/frognerparken.jpg", coords:[10.704114,59.925854]},
    {placeName: "The Opera", placeCategory: "Cool Buildings", placeImages: "assets/imgs/Opera.jpg", coords:[10.781110,59.966250]},
    {placeName: "Museum of Science", placeCategory: "Museums", placeImages: "assets/imgs/teknisk_museum.jpg", coords:[10.754150,59.906570]},
+   {placeName: "Tusenfryd", placeCategory: "Experiences", placeImages: "assets/imgs/tusenfryd.jpg", coords:[10.777370,59.749930]},
+   {placeName: "Sightseeing Bus", placeCategory: "Experiences", placeImages: "assets/imgs/bus.jpg", coords:[10.738270, 59.905060]},
+   {placeName: "Historic museum", placeCategory: "Museums", placeImages: "assets/imgs/n_museum.jpg", coords:[10.771080,59.919791]},
+   {placeName: "Vigeland Park", placeCategory: "Parks", placeImages: "assets/imgs/vigeland.jpg", coords:[10.700963, 59.927022]},
+   {placeName: "Nobel Peacecenter", placeCategory: "Museums", placeImages: "assets/imgs/the-nobel-peace-center.jpg", coords:[10.730253 ,59.911818]},
+   {placeName: "Sognsvann", placeCategory: "Nature", placeImages: "assets/imgs/sognsvann.jpg", coords:[10.727275 ,59.975974]},
+   {placeName: "Paradise bay", placeCategory: "Nature", placeImages: "assets/imgs/paradis.png", coords:[10.665449, 59.902791]},
  ]
 
 
@@ -33,12 +40,19 @@ export class PlacesPage {
    console.log(this.counter);
 
    this.cards = [
-    {placeName: "Barcode", placeCategory: "Cool Buildings", placeImages: "assets/imgs/barcode.jpg", coords:[10.756800,59.908680]},
-    {placeName: "Royal Castle", placeCategory: "Cool Buildings", placeImages: "assets/imgs/slottet.jpeg", coords:[10.704114,59.925854]},
-    {placeName: "Holmenkollen", placeCategory: "Nature", placeImages: "assets/imgs/holmenkollen.jpg", coords:[10.666290,59.962630]},
-    {placeName: "Frognerparken", placeCategory: "Parks", placeImages: "assets/imgs/frognerparken.jpg", coords:[10.704114,59.925854]},
-    {placeName: "The Opera", placeCategory: "Cool Buildings", placeImages: "assets/imgs/Opera.jpg", coords:[10.781110,59.966250]},
-    {placeName: "Museum of Science", placeCategory: "Museums", placeImages: "assets/imgs/teknisk_museum.jpg", coords:[10.754150,59.906570]},
+     {placeName: "Barcode", placeCategory: "Cool Buildings", placeImages: "assets/imgs/barcode.jpg", coords:[10.756800,59.908680]},
+     {placeName: "Royal Castle", placeCategory: "Cool Buildings", placeImages: "assets/imgs/slottet.jpeg", coords:[10.704114,59.925854]},
+     {placeName: "Holmenkollen", placeCategory: "Nature", placeImages: "assets/imgs/holmenkollen.jpg", coords:[10.666290,59.962630]},
+     {placeName: "Frognerparken", placeCategory: "Parks", placeImages: "assets/imgs/frognerparken.jpg", coords:[10.704114,59.925854]},
+     {placeName: "The Opera", placeCategory: "Cool Buildings", placeImages: "assets/imgs/Opera.jpg", coords:[10.781110,59.966250]},
+     {placeName: "Museum of Science", placeCategory: "Museums", placeImages: "assets/imgs/teknisk_museum.jpg", coords:[10.754150,59.906570]},
+     {placeName: "Tusenfryd", placeCategory: "Experiences", placeImages: "assets/imgs/tusenfryd.jpg", coords:[10.777370,59.749930]},
+     {placeName: "Sightseeing Bus", placeCategory: "Experiences", placeImages: "assets/imgs/bus.jpg", coords:[10.738270, 59.905060]},
+     {placeName: "Historic museum", placeCategory: "Museums", placeImages: "assets/imgs/n_museum.jpg", coords:[10.771080,59.919791]},
+     {placeName: "Vigeland Park", placeCategory: "Parks", placeImages: "assets/imgs/vigeland.jpg", coords:[10.700963, 59.927022]},
+     {placeName: "Nobel Peacecenter", placeCategory: "Museums", placeImages: "assets/imgs/the-nobel-peace-center.jpg", coords:[10.730253 ,59.911818]},
+     {placeName: "Sognsvann", placeCategory: "Nature", placeImages: "assets/imgs/sognsvann.jpg", coords:[10.727275 ,59.975974]},
+     {placeName: "Paradise bay", placeCategory: "Nature", placeImages: "assets/imgs/paradis.png", coords:[10.665449, 59.902791]},
    ]
  }
 
