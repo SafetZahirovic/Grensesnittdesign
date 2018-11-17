@@ -4,6 +4,7 @@ import { ExpandableComponent } from '../../components/expandable/expandable';
 import * as firebase from 'Firebase';
 import { MapComponent } from '../../components/map/map';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
+import { MapsPage } from '../maps/maps';
 
  
 @Component({
@@ -26,39 +27,35 @@ export class MyPlacesPage {
       
       firebase.database().ref('Places/'+ firebase.auth().currentUser.uid).on('value', snapshot =>{
      
-        
+        this.cards = []
         Object.keys(snapshot.val()).map(map =>{
+          
           this.cards.push({
             expanded:false,
             name: snapshot.val()[map].buildingName,
             url:snapshot.val()[map].buildingPicture,
             coords:snapshot.val()[map].places
           })
-          
+          //this.coords = snapshot.val()[map].places;
         })
       })
-
- 
     }
 
-    readFromDatabase(){
+    showMap(card){
 
+      this.navCtrl.push(MapsPage, {
+        Coords: card.coords
+      })
     }
  
     expandItem(item){
-       console.log(item);
-       this.coords = item.coords;
-       this.map.getMap(this.coords);
         this.cards.map((listItem) => {
             if(item == listItem){
                 listItem.expanded = !listItem.expanded;
             } else {
-                this.coords = [];
                 listItem.expanded = false;
             }
- 
             return listItem;
- 
         });
  
     }

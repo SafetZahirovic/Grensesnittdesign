@@ -22,3 +22,18 @@
   top: 20% !important;
   left: 40% !important;
 }
+ion-icon {
+  &[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+  &[class*="custom-mynewicon"] {
+    mask-image: url(../assets/svg/icon1.svg);
+  }&[class*="custom-mynewicon1"] {
+    mask-image: url(../assets/svg/icon.svg);
+  }
+}

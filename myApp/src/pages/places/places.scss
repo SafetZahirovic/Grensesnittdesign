@@ -97,8 +97,8 @@ page-places {
 }
 
 .bottom {
-  z-index: 99;
-  position: fixed;
+  z-index: 999999999999999999;
+  position: absolute;
   overflow: hidden;
   background-color: white;
   height: 8%;
@@ -106,3 +106,7 @@ page-places {
   bottom: 0;
   border-top: 1px solid grey;
 }
+#tab-t0-0{
+  display: none!important ;
+}
+

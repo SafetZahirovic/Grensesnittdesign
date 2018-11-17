@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, Tabs } from 'ionic-angular';
 import { MapComponent } from '../../components/map/map';
 import * as firebase from 'Firebase';
+import { PlacesPage } from '../places/places';
 
 
 /**
@@ -50,7 +51,8 @@ export class PlaceDescriptionPage {
   }
 
   back(){
-    this.viewCtrl.dismiss();
+    this.navCtrl.setRoot(PlacesPage, {},{animate: true, direction: 'back'})
+    //this.viewCtrl.dismiss();
   }
 
   addToDatabase(){
@@ -63,8 +65,6 @@ export class PlaceDescriptionPage {
     }
 
   }
-
-
   removeFromDatabase(){
     if(this.foundUser){
       firebase.database().ref('Places/' + firebase.auth().currentUser.uid +"/" + this.placesKey).remove();
