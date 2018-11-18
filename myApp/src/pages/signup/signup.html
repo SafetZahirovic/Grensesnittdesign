@@ -4,45 +4,54 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-    <ion-navbar>
-      <ion-title>Sign up</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-    <form *ngIf="!data.removeFields" (ngSubmit)="handleSignUp()">
-      
-      <ion-list>
-          <ion-item>
-              <ion-label floating>Enter your nickname</ion-label>
-              <ion-input type="email" [(ngModel)]="data.name" name="Email" required=""></ion-input>
-            </ion-item>
-        <ion-item>
-          <ion-label floating>Enter your email</ion-label>
-          <ion-input type="email" [(ngModel)]="data.email" name="Email" required=""></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Enter your email</ion-label>
-            <ion-input type="password" [(ngModel)]="data.password" name="Password" required=""></ion-input>
-        </ion-item>
-          
-          <button ion-button full color="primary" type="submit">Sign up</button>
-         
-      </ion-list>
-      
-    </form>
-    
-    <ion-content>
-        <div>{{data.userCreated}}</div>
-        <div id="message"></div>
-        <div  *ngIf="data.removeFields" id="circle-loader" class="circle-loader">
-            <div class="checkmark draw"></div>
-          </div>
-       
-        <button *ngIf="data.continue" ion-button full  (click)="goToNextPage()" color="primary" type="submit">Continue</button>
-       
-    </ion-content>
-    
-    
+
+
+<ion-content padding>
+
+    <canvas style="display: none" width="300px" height="200"></canvas>
+    <!-- <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img> -->
+    <video preload="true" class="mov" src="assets/imgs/norwegian.mp4" type="video/mp4" autoplay loop muted playsinline>
+    </video>
+
+
+
+
+  <form *ngIf="!data.removeFields" (ngSubmit)="handleSignUp()">
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Enter your nickname</ion-label>
+        <ion-input type="email" [(ngModel)]="data.name" name="Email" required=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Enter your email</ion-label>
+        <ion-input type="email" [(ngModel)]="data.email" name="Email" required=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Enter your password</ion-label>
+        <ion-input type="password" [(ngModel)]="data.password" name="Password" required=""></ion-input>
+      </ion-item>
+
+      <button class="btn2" type="submit">Sign up</button>
+      <div class="acc-btn" text-center (click)="resetPassword()">Already have an account? <br>
+        Sign in here
+      </div>
+
+    </ion-list>
+
+  </form>
+
+  <ion-content>
+    <div>{{data.userCreated}}</div>
+    <div id="message"></div>
+    <div *ngIf="data.removeFields" id="circle-loader" class="circle-loader">
+      <div class="checkmark draw"></div>
+    </div>
+
+    <button *ngIf="data.continue" ion-button full (click)="goToNextPage()" color="primary" type="submit">Continue
+    </button>
+
   </ion-content>
+
+
+</ion-content>

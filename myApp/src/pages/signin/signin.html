@@ -8,7 +8,10 @@
 
   <ion-content padding>
 
-    <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img>
+    <canvas style="display: none" width="300px" height="200"></canvas>
+    <!-- <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img> -->
+    <video preload="true" class="mov" src="assets/imgs/norwegian.mp4" type="video/mp4" autoplay loop muted playsinline>
+    </video>
     <form (ngSubmit)="userLogin()">
     <ion-list>
         <ion-item>
