@@ -11,23 +11,25 @@
   <div class="stoppable">
     <canvas style="display: none" width="300px" height="200"></canvas>
     <!-- <ion-img class="img" src="assets/imgs/oslo-logo.png" alt="not found"></ion-img> -->
-    <ion-img class="gif" src="assets/imgs/oslo-logo.gif" alt="not found"></ion-img>
+    <video preload="true" class="mov" src="assets/imgs/oslo-logo.mp4" type="video/mp4" autoplay muted playsinline>
+    </video>
+
+
   </div>
 
 
-  <form (ngSubmit)="userLogin()">
+
     <ion-list>
 
       <div class="btn-container">
         <button class="btn1" (click)="userLogin()" type="submit">Sign In</button>
-        <button class="btn2" href="#" type="submit">Sign up</button>
+        <button class="btn2" href="#" (click)="userSignup()" type="submit">Sign up</button>
       </div>
-    </ion-list>
-  </form>
   <div id="continue" text-center (click)="continueAsGuest()">Continue as a guest</div>
+    </ion-list>
+
 
 
 </ion-content>
-
 
 
