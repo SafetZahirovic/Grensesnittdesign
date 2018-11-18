@@ -1,116 +1,146 @@
+page-signup
+
+  // Define vars we'll be using
+  $brand-success: #5cb85c
+  $loader-size: 7em
+  $check-height: $loader-size/2
+  $check-width: $check-height/2
+  $check-left: ($loader-size/6 + $loader-size/12)
+  $check-thickness: 3px
+  $check-color: $brand-success
+
+  .content
+    top: 10px
+
+  .no-scroll .scroll-content
+    overflow: hidden
+
+
+  .form
+    position: relative
+    bottom: 50px
+
+
+  .list
+    position: relative !important
+    display: block
+    z-index: 10
+    bottom: 13rem
+
+
+
+  .item
+    font-size: 1.3rem
+    text-align: justify
+    height: 50px
+
+  .label
+    padding-bottom: 50px
+    margin: 0
+
+  .circle-loader
+    margin-bottom: $loader-size/2
+    border: 1px solid rgba(0, 0, 0, 0.2)
+    border-left-color: $check-color
+    animation: loader-spin 1.2s infinite linear
+    position: relative
+    display: inline-block
+    vertical-align: top
+    border-radius: 50%
+    width: $loader-size
+    height: $loader-size
+
+
+  #load-complete
+    -webkit-animation: none
+    animation: none
+    border-color: $check-color
+    transition: border 500ms ease-out
+
+
+  .checkmark
+    display: none
+
+    &.draw:after
+      animation-duration: 800ms
+      animation-timing-function: ease
+      animation-name: checkmark
+      transform: scaleX(-1) rotate(135deg)
+
+
+    &:after
+      opacity: 1
+      height: $check-height
+      width: $check-width
+      transform-origin: left top
+      border-right: $check-thickness solid $check-color
+      border-top: $check-thickness solid $check-color
+      content: ''
+      left: $check-left
+      top: $check-height
+      position: absolute
+
+
+
+  @keyframes loader-spin
+    0%
+      transform: rotate(0deg)
+
+    100%
+      transform: rotate(360deg)
+
+
+  @keyframes checkmark
+    0%
+      height: 0
+      width: 0
+      opacity: 1
+
+    20%
+      height: 0
+      width: $check-width
+      opacity: 1
+
+    40%
+      height: $check-height
+      width: $check-width
+      opacity: 1
+
+    100%
+      height: $check-height
+      width: $check-width
+      opacity: 1
+
+
+
 
 img
   max-width: 100%
   border: 0
-
   width: 50rem
   height: 42rem
 
-.img
+
+.mov
+  z-index: 20
   position: relative
   background-color: transparent
   display: block
   width: 48rem
   height: 50rem
   right: 7rem
-  bottom: 3rem
+  bottom: 5rem !important
   transform: scale(0.7)
   -ms-transform: scale(0.7)
   -webkit-transform: scale(0.7)
 
-
-
-form
-  position: relative
-  display: block
-
-  bottom: 16rem
-#button-container
-    margin-top: 30px
-
-.button-round-ios
-    padding: 1.7em
-
-.button-outline-ios-secondary
-    width: 100%
-
-page-signin
-  .item-ios
-    border: 1px solid grey !important
-    margin: 10px auto
-    padding-left: 0 !important
-    border-radius: 7px
-    width: 80%
-
-  .item-inner
-    border: none !important
-    padding: 0 !important
-
-  .item-input ion-label
-    display: none
-
-
-
-
-.btn2
-  position: relative
-  width: 280px
-  height: 60px
-  border-radius: 50px
-  box-sizing: border-box
-  display: block
-
-
-  color: #FFFFFF
-  font-family: Helvetica
-  font-size: 20px
-  text-transform: uppercase
-
-  -webkit-transition-duration: 0.9s
-  /* Safari */
-  transition-duration: 0.9s
-  text-decoration: none
-  overflow: hidden
-  cursor: pointer
-
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#86B2E6), to(#277CAE))
-  background-image: -webkit-linear-gradient(to right, #86B2E6, #277CAE)
-  background-image: -moz-linear-gradient(to right, #86B2E6, #277CAE)
-  background-image: -ms-linear-gradient(to right, #86B2E6, #277CAE)
-  background-image: -o-linear-gradient(to right, #86B2E6, #277CAE)
-  background-image: linear-gradient(to right, #86B2E6, #277CAE)
-
-.btn2:hover
-  background: #277CAE radial-gradient(circle, transparent 1%, #277CAE 1%) center/30000%
-
-.btn2:after
-  content: ""
-  background: #FFFFFF
-  display: block
-  position: absolute
-  padding-top: 300%
-  padding-left: 350%
-  margin-left: -20px !important
-  margin-top: -120%
-  opacity: 0
-  transition: all 1s
-
-.btn2:active
-  background-color: #86B2E6
-  background-size: 100%
-  transition: background 0s
-
-
-.forgot-btn
-  position: relative
-  left: 10rem
-  color: rgba(0,0,0, 0.6)
-  cursor: pointer
-
-
 .acc-btn
   position: relative
-  top: 2rem
+  top: 3rem
   color: rgba(0,0,0, 0.6)
   cursor: pointer
+
+.ios .acc-btn
+  top: 4rem !important
+
 
