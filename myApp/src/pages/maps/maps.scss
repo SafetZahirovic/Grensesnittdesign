@@ -1,0 +1,23 @@
+page-maps {
+    ion-icon {
+        padding: 10px;
+        color: black;
+        display: inline-block;
+        font-size: 5em;
+    }
+      #button{
+          position: absolute;
+          z-index: 9999;
+          background: none;
+          color: white;
+          top: 5%;
+          left: 0%;
+          font-size: 15px;
+      }
+      button{
+          border: none !important;
+      }
+      .item-inner{
+        border: none !important;
+      }
+}

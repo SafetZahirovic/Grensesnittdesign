@@ -1,0 +1,37 @@
+
+<ion-header>
+    <ion-navbar>
+      <ion-title>Sign up</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <div id="header">{{data.userCreated}}</div>
+   
+   
+  </ion-content>
+  
+  
+  <ion-content >
+      <button id="button-back" (click)="back()" icon-only>
+          <ion-icon name="ios-arrow-round-back"  ></ion-icon>
+        </button>
+        <button *ngIf="data.continue" id="confirm-button" ion-button full round (click)="goToNextPage()" color="primary" type="submit">Continue</button>
+    <form *ngIf="!data.removeFields" (ngSubmit)="handleSignUp()">
+      
+      <ion-list>
+          <div id="message"></div>
+          <ion-item>
+              <ion-input type="text" placeholder="Username" [(ngModel)]="data.name" [ngModelOptions]="{standalone: true}" name="Email" required=""></ion-input>
+            </ion-item>
+        <ion-item>
+          <ion-input type="email" placeholder="Email"[(ngModel)]="data.email" [ngModelOptions]="{standalone: true}" name="Email" required=""></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="data.password" [ngModelOptions]="{standalone: true}" name="Password" required=""></ion-input>
+        </ion-item>
+          
+          <button id="sign-up" ion-button full round color="primary" type="submit">Sign up</button>  
+      </ion-list>  
+    </form>
+  </ion-content>

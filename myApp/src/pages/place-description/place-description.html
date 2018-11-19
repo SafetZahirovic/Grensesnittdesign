@@ -1,0 +1,77 @@
+<!--
+  Generated template for the PlaceDescriptionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<nav-bar class="bottom"></nav-bar>
+<ion-content>
+  <button id="button" (click)="back()" icon-only>
+    <ion-icon name="ios-arrow-round-back"  ></ion-icon>
+  </button>
+  <div class="hero">
+    <img src={{this.img}} alt="" />
+    <figure>
+      <figcaption>
+        <h1>{{this.name}}</h1>
+        <hr>
+        <p> {{ this.quote }}</p>
+      </figcaption>
+    </figure>
+    <button id="favourites" (click)="this.foundUser ? removeFromDatabase() :  addToDatabase()">
+      
+      
+      <ion-icon *ngIf="this.foundUser" name="checkmark-circle"></ion-icon>
+      <ion-icon *ngIf="!this.foundUser" name="ios-heart-outline"></ion-icon>
+    </button>
+  </div>
+  <div id="description-container">
+    <div id="description-header">
+      <p>{{this.adress}}</p>
+    </div>
+    <div id="description-text">
+      <p>{{ this.description }}</p>
+    </div>
+  </div>
+  <div id="comments-container">
+    <p class="small-headline">Comments and Reviews</p>
+    <hr>
+    <div class="comments">
+      <div class="author">Author: <b> {{this.author1 }}</b></div>
+      <div class="rating-author-container">
+        <div class="comment-header"><b> {{ this.header1 }} </b></div>
+        <img class="rating" src= {{this.rating1}} />
+      </div>
+      <div class="real-comment">
+        <p>{{ this.comment1 }}</p>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="author">Author: <b> {{this.author2 }}</b></div>
+      <div class="rating-author-container">
+        <div class="comment-header"><b> {{ this.header2 }} </b></div>
+        <img class="rating" src= {{this.rating2}} />
+      </div>
+      <div class="real-comment">
+        <p>{{ this.comment2 }}</p>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="author">Author: <b> {{this.author3 }}</b></div>
+      <div class="rating-author-container">
+        <div class="comment-header"><b> {{ this.header3 }} </b></div>
+        <img class="rating" src= {{this.rating3}} />
+      </div>
+      <div class="real-comment">
+        <p>{{ this.comment3 }}</p>
+      </div>
+    </div>
+  </div>
+  <div id="description-map-container"> 
+    <div id='mapPlaces' style='z-index: 9999; width: 100%; height: 100%;'></div
+      ></div>
+ 
+</ion-content>
+
+

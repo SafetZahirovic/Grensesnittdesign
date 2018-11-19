@@ -1,0 +1,35 @@
+
+
+page-startpage {
+    .mov{
+        position: absolute;
+        height: 30em;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .button{
+        width: 80%;
+        margin: auto;
+    }
+    .button-outline {
+        left: 10%;
+        margin: 20px auto;
+    }
+    .list{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+    }
+    #main{
+        background-image: linear-gradient(to right,#FAD961,#F76B1C );
+    }
+    .button-outline{
+        color: #F76B1C !important;
+        border-color: #F76B1C !important;
+        width: 90%;
+        left: 5%;
+    }
+        
+}

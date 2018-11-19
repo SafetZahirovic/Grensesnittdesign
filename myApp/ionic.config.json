@@ -1,0 +1,7 @@
+{
+  "name": "Grensesnitt",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

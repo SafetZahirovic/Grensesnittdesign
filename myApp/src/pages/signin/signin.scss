@@ -1,0 +1,63 @@
+page-signin {
+    .item-ios {
+        border: 1px solid lightgrey!important;
+        margin: 10px auto;
+        padding-left: 0 !important;
+        border-radius: 7px;
+        width: 80%;
+        
+    }
+    .mov{
+        position: relative;
+        height: 30em;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .list{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    .item-inner{
+        border: none !important;
+        padding: 0 !important;
+    }
+    .item-input ion-label{
+        display: none;
+    }
+    form{
+    margin-top: 60px;
+    }
+    #button-container{
+        margin-top: 60px;
+    }
+    .button-round-ios{
+        padding: 1.7em;
+    }
+    .button-outline-ios-secondary{
+        width: 100%;
+    }
+    .button{
+        margin: 20px auto;
+        width: 80%;
+    }
+    #primary{
+        background-image: linear-gradient(to right,#FAD961,#F76B1C );
+    }
+    .button-outline{
+        color: #F76B1C;
+        border-color: #F76B1C;
+    }
+    #button{
+        position: absolute;
+        z-index: 9999;
+        background: none;
+        color: #F76B1C;
+        top: 0;
+        left: 5%;
+        font-size: 50px;
+      }
+    
+}

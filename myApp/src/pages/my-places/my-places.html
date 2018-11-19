@@ -1,0 +1,28 @@
+<!--
+  Generated template for the MyPlacesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        My day on Oslo
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+   
+  <ion-content>
+   
+  
+        <ion-item id="list" detail-none ion-item *ngFor="let card of cards;">
+          <ion-thumbnail id="thumbnail" item-start>
+            <img src="{{card.url}}">
+          </ion-thumbnail>
+          <div id="heading">{{card.name}}</div>
+          <button id="delete" (click)="delete(card.key)" ion-button><ion-icon name="trash"></ion-icon></button>
+          <button id="travel" class="balanced" (click)="showMap(card)" ion-button><ion-icon name="walk"></ion-icon></button>
+          <div class="vl"></div>
+      </ion-item>
+     
+  </ion-content>

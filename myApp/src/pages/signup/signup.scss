@@ -1,0 +1,87 @@
+page-signup {
+  .list{
+    top: 10em;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+  }
+  .item{
+    padding: 0 !important;
+    width: 80%;
+    margin: auto;
+  }
+  .item-inner{
+    
+    height: 3em;
+    border: 1px solid grey !important;
+    margin: 20px auto;
+    border-radius: 7px;
+    width: 90%;
+}
+  .list-ios > .item-block:first-child{
+    border: none;
+  }
+  #sign-up{
+    margin: 60px auto;
+    width: 80%;
+    background-image: linear-gradient(to right,#FAD961,#F76B1C );
+  }
+ 
+  #confirm-button{
+    z-index: 99999;
+    left: 10%;
+    top: 70%;
+    position: absolute;
+    margin: auto;
+    width: 80%;
+  }
+  #header{
+    top: 30%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+  #message{
+    color: red;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    top: 10%;
+    font-size: 20px;
+  }
+
+  #button{
+    position: absolute;
+    z-index: 9999;
+    background: none;
+    color: black;
+    top: 5%;
+    left: 0%;
+    font-size: 30px;
+  }
+  .button-outline{
+    color: #F76B1C !important;
+    border-color: #F76B1C !important;
+}
+#confirm-button{
+  background-image: linear-gradient(to right,#FAD961,#F76B1C );
+}
+#button-back{
+  position: absolute;
+  z-index: 9999;
+  background: none;
+  color: #F76B1C;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+}
+
+}
+ 
+
+
+
+
+
+ 
