@@ -20,8 +20,8 @@
             <img src="{{card.url}}">
           </ion-thumbnail>
           <div id="heading">{{card.name}}</div>
-          <button id="delete" (click)="delete(card.key)" ion-button><ion-icon name="trash"></ion-icon></button>
-          <button id="travel" class="balanced" (click)="showMap(card)" ion-button><ion-icon name="walk"></ion-icon></button>
+          <button id="delete" (click)="showMap(card)" ion-button> <ion-icon name="navigate"></ion-icon></button>
+          <button id="travel" class="balanced" (click)="delete(card.key)" ion-button> <ion-icon name="close"></ion-icon></button>
           <div class="vl"></div>
       </ion-item>
      

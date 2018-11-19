@@ -28,7 +28,6 @@ export class ResetPasswordPage {
     var emailAddress = email;
     
     auth.sendPasswordResetEmail(emailAddress).then(function() {
-      console.log("sent email to: " + emailAddress);
       
       // Email sent.
     }).then(() =>{
