@@ -27,6 +27,11 @@ export class PlacesPage {
     }
  }
 
+ back(){
+    this.navCtrl.setRoot(Startpage, {},{animate: true, direction: 'back'})
+  }
+
+
  public cards = [
   {placeName: "Barcode", placeCategory: "Cool Buildings", placeImages: "assets/imgs/barcode.jpg", adress: "Dronning Eufemias gate", quote: "The New City",coords:[10.756800,59.908680], description: 
   "As well as spectacular architecture, Barcode offers more than 30 different restaurants, stores, galleries and services. The restaurants offer food from around the world and houses" 
@@ -184,7 +189,6 @@ push(){
 }
 
 ionViewDidLoad(){
-    console.log(firebase.auth().currentUser);
     if(!this.asked){
         if(!firebase.auth().currentUser){
             var tabs = document.getElementById("tab-t0-2");

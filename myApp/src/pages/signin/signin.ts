@@ -37,6 +37,7 @@ export class SigninPage {
     this.data.isTrue = this.navParams.get("true") as boolean;
     Object.keys(this.storage).map( e =>{
     })
+  
   }
 
   userLogin() {
@@ -62,8 +63,6 @@ export class SigninPage {
       var errorMessage = error.message;
       alert(errorMessage);
       Message ="You don't have a user";
-
-      
       // ...
     });
 
